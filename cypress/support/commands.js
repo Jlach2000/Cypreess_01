@@ -29,4 +29,7 @@ Cypress.Commands.add("signIn", (email, password) =>{
     cy.get('#user_email').type(email);
     cy.get('#user_password').type(password);
     cy.get('[type="submit"]').click()
+    cy.wait(3000);
+    cy.get('#open-navigation-menu-mobile').click()
+    cy.wait(2000)
 });
